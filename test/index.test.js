@@ -31,9 +31,6 @@ class HelloController extends Controller {
             storeName: store.state.name
         }
     }
-    render () {
-        return super.render()
-    }
 }
 
 const HelloView = ({ name, storeName, changeName }) => {
