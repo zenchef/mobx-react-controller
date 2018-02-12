@@ -33,4 +33,4 @@ const connectController = ControllerComponent => WrappedComponent => {
     return ConnectedComponent
 }
 
-export { Controller, connectController }
+export { Controller, connectController, getDisplayName}

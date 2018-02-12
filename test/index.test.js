@@ -1,10 +1,9 @@
 import React from 'react'
-import { connectController, Controller } from '../src/index'
+import { connectController, Controller, getDisplayName} from '../src/index'
 import ReactTestUtils from 'react-dom/test-utils'
 import { expect } from 'chai'
 import ShallowRenderer from 'react-test-renderer/shallow'
 import { observable } from 'mobx'
-
 
 // Setup a mobx Store
 class Store {
@@ -123,5 +122,24 @@ describe('mobx-react-controller', function () {
         store.changeName()
 
         expect(p.textContent).to.equal('Hello Nassim !')
+    })
+})
+
+describe('getDisplayName', function () {
+    it('should get correct displayName for class component', () => {
+        class MyComponent extends React.Component {}
+        expect(getDisplayName(MyComponent)).to.equal('MyComponent')
+    })
+    it('should get correct displayName for functional component', () => {
+        function MyComponent() {}
+        expect(getDisplayName(MyComponent)).to.equal('MyComponent')
+    })
+    it('should get correct displayName for arrow function component', () => {
+        const MyComponent = () => {}
+        expect(getDisplayName(MyComponent)).to.equal('MyComponent')
+    })
+    it('should get correct displayName for arrow function component', () => {
+        const MyComponent = () => {}
+        expect(getDisplayName(MyComponent)).to.equal('MyComponent')
     })
 })
