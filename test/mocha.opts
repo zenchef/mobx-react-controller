@@ -1,0 +1,2 @@
+test/index.test.js
+--require test/utils/dom.js

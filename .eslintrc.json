@@ -1,0 +1,24 @@
+{
+    "parser": "babel-eslint",
+    "extends": ["standard", "standard-react"],
+    "parserOptions": {
+        "ecmaVersion": 7,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "rules": {
+        "indent": [2, 4],
+        "strict": 0,
+        "camelcase": 0,
+        "react/jsx-uses-vars": 1,
+        "react/jsx-indent": [2, 4],
+        "react/jsx-indent-props": [2, 4],
+        "react/prop-types": 0,
+        "max-len": [2, 120, 2, { "ignoreComments": true, "ignorePattern": "ignoreLongStrings" }],
+        "react/jsx-closing-bracket-location": [1, { "selfClosing": "line-aligned", "nonEmpty": "after-props" }]
+    },
+    "plugins": ["eslint-plugin-react"]
+}
