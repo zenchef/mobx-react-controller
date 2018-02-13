@@ -1,8 +1,8 @@
 {
   "name": "@zenchef/mobx-react-controller",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Component and a Decorator to separate MobX powered React Components into a Controller and View",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "lint": "eslint --debug .",
     "test": "nyc --reporter=html mocha",
