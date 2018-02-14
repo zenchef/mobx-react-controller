@@ -1,6 +1,6 @@
 {
   "name": "@zenchef/mobx-react-controller",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Component and a Decorator to separate MobX powered React Components into a Controller and View",
   "main": "dist/index.js",
   "scripts": {
@@ -45,9 +45,9 @@
     "react-test-renderer": "^16.2.0",
     "webpack": "^3.11.0"
   },
-  "dependencies": {
-    "mobx": "^3.5.1",
-    "mobx-react": "^4.4.1"
+  "peerDependencies": {
+    "mobx": "3.x",
+    "mobx-react": "4.x"
   },
   "nyc": {
     "all": true,
